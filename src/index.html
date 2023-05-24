@@ -6,8 +6,62 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+     .btn {
+    
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      width: 60px;
+      height: 60px;
+  
+    }
+  </style>
 </head>
 <body>
+
+
   <app-root></app-root>
+  <section>
+    <div class="container-fluid">
+      <button class="btn" style="display: block;background-color: #f85a40;border-radius: 50%;color: white;  border: none;  display: none;
+      cursor: pointer;
+      position: fixed;"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    const button = document.querySelector('.btn');
+
+    const displayButton = () => {
+      window.addEventListener('scroll', () => {
+        console.log(window.scrollY);
+
+        if (window.scrollY > 100) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      });
+    };
+
+    const scrollToTop = () => {
+      button.addEventListener("click", () => {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+        console.log(event);
+      });
+    };
+
+    displayButton();
+    scrollToTop();
+  </script>
 </body>
 </html>

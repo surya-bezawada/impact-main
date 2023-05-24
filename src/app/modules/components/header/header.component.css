@@ -1,0 +1,58 @@
+
+.sticked {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+.sticked {
+    transition: all 0.5s;
+    z-index: 997;
+    /* height: 90px; */
+   background-color: #00796b;
+}
+
+.navbar-light .navbar-brand {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-weight: 600;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #00796b!important;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #f85a40;
+}
+.header_content {
+    padding: 6rem 0 5rem 0;
+ 
+}
+.header_content h1{
+    font-size: 56px;
+    font-weight: 500;
+    color: #fff;
+}
+.header_content p{
+    color: rgba(255, 255, 255, 0.8);
+}
+

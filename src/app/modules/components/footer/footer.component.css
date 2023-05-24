@@ -1,0 +1,42 @@
+.fa{
+    border-radius: 30px;
+    padding:11px 3px 11px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+}
+
+.fa:hover{
+    border-radius: 30px;
+    padding: 11px 3px 11px 12px;
+    border: 1px solid #fff;
+    color:#fff;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+}
+
+.footer h4{
+    font-size: 16px;
+}
+.links_css ul li{
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.address_css ul li{
+    color: #ffff;
+}
+.copy_right{
+    line-height: 10px;
+    font-size: 14px;
+}
+.links_css ul li:hover{
+color: #fff;
+}

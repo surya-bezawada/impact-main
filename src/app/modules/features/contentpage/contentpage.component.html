@@ -1,0 +1,35 @@
+
+<section class="mt-5 pt-2 mb-3">
+    <div class="container">
+        <div class="row mb-4 d-flex ">
+            <div class="col-lg-4 "  *ngFor="let item of articles">
+                <div class="card mb-2 ">
+                    <div class="p-4 content">
+                        <h3><a routerLinkActive="active" (click) = "renavigateToBlogs(item?.slug)">{{item.title}}</a></h3>
+                        <p>{{item.description}}</p>
+                        <div class="mt-3 d-flex justify-content-start">
+                            <img src="{{item.author.image}}"
+                                class="rounded-circle img-fluid small_img" alt="" />
+                            <div class="name_date ms-3">
+                                <h6 class="mt-2">{{item.author.username}}</h6>
+                                <p>{{item.createdAt|date:'MMM d, yyyy'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+     
+    </div>
+
+    
+<div class="container">
+    <div class="btn-group d-flex justify-content-center" role="group" >
+        <button type="button" class="btn btn-outline-success" *ngFor = "let numberObj  of countArray;let numberIndex = index"
+        (click) = "getSelectedCount(numberIndex)">{{numberObj}}</button>
+      </div>
+</div>
+</section>
+
+
