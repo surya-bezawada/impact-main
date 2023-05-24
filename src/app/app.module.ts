@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './modules/features/auth/auth.component';
 import { TabsComponent } from './modules/components/tabs/tabs.component';
+import { ArticlesComponent } from './modules/features/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TabsComponent } from './modules/components/tabs/tabs.component';
     BlogdetailsComponent,
     ContentpageComponent,
     AuthComponent,
-    TabsComponent
+    TabsComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,

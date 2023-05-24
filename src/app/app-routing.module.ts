@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './modules/components/tabs/tabs.component';
+import { ArticlesComponent } from './modules/features/articles/articles.component';
 import { AuthComponent } from './modules/features/auth/auth.component';
 import { BlogdetailsComponent } from './modules/features/blogdetails/blogdetails.component';
 import { CommentsComponent } from './modules/features/comments/comments.component';
@@ -15,7 +16,9 @@ const routes: Routes = [
     path:'comments',component:CommentsComponent
   },
   {path:'auth',component:AuthComponent},
-  {path:'tabs',component:TabsComponent}
+  {path:'tabs',component:TabsComponent},
+  {path:'articles',component:ArticlesComponent},
+
 ];
 
 @NgModule({

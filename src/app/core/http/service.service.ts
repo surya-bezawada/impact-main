@@ -20,4 +20,10 @@ export class ServiceService {
   getPopularTags(){
     return this.http.get(environment.baseUrl+'tags')
   } 
+
+  getFeed(limit:number,offset:number){
+    return this.http.get(environment.baseUrl+'articles'+'/feed'+'?limit='+limit+'&offset='+offset);
+
+  }
+ 
 }

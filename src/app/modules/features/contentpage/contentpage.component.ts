@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
 import { ServiceService } from 'src/app/core/http/service.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { ServiceService } from 'src/app/core/http/service.service';
   styleUrls: ['./contentpage.component.css']
 })
 export class ContentpageComponent implements OnInit {
+  onDestroy$ = new Subject<boolean>()
 
   constructor(
     private service: ServiceService,
@@ -35,6 +37,8 @@ export class ContentpageComponent implements OnInit {
     this.imageArray=[
 img1, img2, img3, img4,img5,img6,img7,img8,img9,img10
     ]
+    this.getPagination();
+    this.getPopularTagsList();
   }
 
   articles:any;
@@ -57,6 +61,9 @@ getGlobalArticles(limitIndex:number,offSetIndex:number){
   
   })
  
+
+}
+getPagination():void {
   for(let i = 0;i<=this.count;i++) {
     i = i+9;
     this.countIncrese++;
@@ -73,6 +80,12 @@ getSelectedCount(numberIndex:number) {
 renavigateToBlogs(slug:string) {
  this._routers.navigate(['blog'],{queryParams:{slugData:slug}})
 }
-
+tags:any;
+getPopularTagsList(){
+ this.service.getPopularTags().pipe(takeUntil(this.onDestroy$)).subscribe(res=>{
+   this.tags=res;
+   console.log(res)
+ })
+}
 
 }

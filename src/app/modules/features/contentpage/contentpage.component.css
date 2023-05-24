@@ -35,3 +35,12 @@
     height:420px;
     cursor: pointer;
 }
+.title{
+      
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+      
+
+}

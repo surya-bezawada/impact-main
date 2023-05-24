@@ -34,7 +34,7 @@ export class BlogdetailsComponent implements OnInit {
  tags:any;
  getPopularTagsList(){
   this._apiService.getPopularTags().pipe(takeUntil(this.onDestroy$)).subscribe(res=>{
-    //this.tags=res;
+    this.tags=res;
     console.log(res)
   })
  }
